@@ -33,7 +33,20 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-    start((Inicio))
+    start((Inicio)) --> input[\Digite sua nota\] 
+    --> decisao{Nota >= 50}
+    decisao --> |sim| A{FREQUENCIA>=75%}
+    decisao --> |nao| B[/REPROVADO/]
+    A --> |SIM| C[/APROVADO/]
+    A --> |NAO| D[/REPROVADO/]
+    B--> finish([FIM])
+    C --> finish
+    D --> finish
+    
+
+
+
+    
    ```
    
 3. Crie um fluxograma para calcular a soma de dois números fornecidos pelo usuário.
