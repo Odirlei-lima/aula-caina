@@ -42,6 +42,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     B--> finish([FIM])
     C --> finish
     D --> finish
+    1 
     
 
 
@@ -53,7 +54,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      B["Sua resposta aqui!"]
+   start((Inicio)) --> input[\Digite o primeiro numero\]
+   --> imput[\Digite o segundo numero\]
+   --> h[soma]
+   --> finish([fim])
+
+
    ```
    
 4. Elabore um fluxograma que leia um número e exiba se ele é positivo ou negativo.
