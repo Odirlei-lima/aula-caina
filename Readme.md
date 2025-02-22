@@ -57,6 +57,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    start((Inicio)) --> input[\Digite o primeiro numero\]
    --> imput[\Digite o segundo numero\]
    --> h[soma]
+   --> R[/Resultado/]
    --> finish([fim])
 
 
@@ -67,7 +68,15 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       C["Sua resposta aqui!"]
-   ```
+      start((Inicio)) 
+      --> input[\Digite um numero\]  
+      --> decisao{n>=0}
+       decisao--> |Sim| A[/ PAR /]
+       decisao--> |Não| B[/ IMPAR /]
+        A --> finish([ Fim ])
+        B --> finish
+
+      ```
    
 5. Desenvolva um fluxograma que leia a idade de uma pessoa e indique se ela pode votar.
    
@@ -87,7 +96,18 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      F["Sua resposta aqui!"]
+     start((Inicio)) --> B[\digite n1\]
+     B-->C[\digite n2\]
+     C-->D[\digite n3\]
+     D-->E{n1>n2}
+     E-->|sim| F{n1>n2}
+     E-->|nao| G{n2>n3}
+     F-->|sim| H[/n1 é o maior/]
+     F-->|nao| I{n3==n1 \ or \ n3==n2}
+     
+
+
+
    ```
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
